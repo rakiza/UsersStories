@@ -1,0 +1,26 @@
+﻿@page
+@model UsersStories.Pages.Stories.IndexModel
+<p>
+    <a href="#" class="add-new-story">Nouveau récit</a>
+</p>
+<partial name="_Filter" for="Filter" />
+<div class="row" id="list-stories">
+    @foreach (var item in Model.Stories)
+    {
+        <partial name="_Story" for="@item" />
+    }
+</div> 
+<div class="float-right" id="footer-add-story">
+    <div class="fixed-bottom">
+        <a href="#" class="add-new-story">
+            <div>
+               +
+            </div>
+        </a>
+    </div>    
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+
+}

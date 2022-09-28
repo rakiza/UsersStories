@@ -1,0 +1,49 @@
+﻿@page
+@model UsersStories.Pages.Stories.DetailsModel
+
+<div>
+    <h4>Story</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Story.What)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Story.What)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Story.Why)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Story.Why)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Story.Order)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Story.Order)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Story.Validated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Story.Validated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Story.SysDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Story.SysDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Story.Actor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Story.Actor.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Story.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

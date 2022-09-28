@@ -1,0 +1,144 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+  margin-top:80px;
+}
+
+.fixed-bottom {
+    position: fixed;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    right: 40px;
+    bottom: 40px;
+    background-color: transparent !important;    
+    
+}
+    .fixed-bottom a {
+        float:right;
+    }
+    .fixed-bottom a:hover {
+        text-decoration:none;
+    }
+        .fixed-bottom a:hover div {
+            box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.2);
+            background-color: #0b74ec;
+        }
+        .fixed-bottom a div {
+            background-color: #1b6ec2;
+            box-shadow: 0 .25rem .75rem rgba(0, 0, 0, 0.1);
+            color: #fff;
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+            text-align: center;
+            font-size: 35px;
+            padding-top:8px;
+        }
+        .fixed-bottom a:hover {
+            
+            color: #fff;
+        }
+.story-view{
+    padding-top:3px;
+    padding-bottom:0;
+    border-radius:15px;
+    
+}
+    .story-view .context {
+        position: relative;
+        top: 3px;
+        right: 3px;
+        font-size: 13px; 
+        margin-bottom:8px;
+    }
+    .story-view .context i {        
+        font-size: 14px;        
+    }
+    .story-view .context .story-number {
+        position: relative;
+        top: 3px;
+        right: 3px;
+        font-size: 12px;
+        margin-bottom: 8px;
+        width:40%;
+        float:left;
+    }
+    .story-view .story-btns {
+        margin-top: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        margin-bottom: 8px;
+        padding-top:4px;
+    }
+        .story-view .story-btns a {
+            font-size: 14px;
+        }

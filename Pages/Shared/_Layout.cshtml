@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Projet DocMissions / Users Stories</title>
+
+    <meta property="og:type" content="web" />
+    <meta property="og:title" content="Projet Doc Missions rédaction des récits utilisateurs" />
+    <meta property="og:description" content="Un récit utilisateur, ou « user story » en anglais, est une description simple d’un besoin ou d’une attente exprimée par un utilisateur et utilisée dans le domaine du développement de logiciels et de la conception de nouveaux produits pour déterminer les fonctionnalités à développer." />
+    <meta property="og:site_name" content="Projet Doc Missions" />
+    <meta property="og:image" content="http://imazsoft.dz/themes/imazsoft/assets/img/core-img/logo.png" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Projet Doc Missions rédaction des récits utilisateurs" />
+    <meta name="twitter:description" content="Un récit utilisateur, ou « user story » en anglais, est une description simple d’un besoin ou d’une attente exprimée par un utilisateur et utilisée dans le domaine du développement de logiciels et de la conception de nouveaux produits pour déterminer les fonctionnalités à développer." />
+    <meta name="twitter:url" content="http://docmissions.imazsoft.dz/" />
+    <meta name="twitter:domain" content="docmissions.imazsoft.dz" />
+    <meta name="twitter:image:src" content="http://imazsoft.dz/themes/imazsoft/assets/img/core-img/logo.png" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <partial name="_Menu" />        
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3"  style="margin-bottom:80px;">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - DocMissions Users Stories - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

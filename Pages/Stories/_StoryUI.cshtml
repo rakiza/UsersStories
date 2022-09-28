@@ -1,0 +1,53 @@
+﻿@model StoryModel
+@if (Model.Editing)
+{
+    <div class="alert alert-@Model.Color adding-new-story" role="alert" id="story-content-@Model.Id" >
+        <form id="story-form-@Model.Id">
+            <div id="new-story-ui">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="Color" />
+                <input type="hidden" asp-for="Order" />
+            
+                    <strong>N° @Model.Order</strong><br />
+                    Context:<select asp-items="@Model.Contexts" asp-for="ContextId" class="form-control">
+                        <option value="">--Context--</option>
+                    </select>
+                    En tant que <select asp-items="@Model.Actors" asp-for="ActorId" class="form-control actor-change" data-id="@Model.Id">
+                        <option value="">--Acteur--</option>
+                    </select>, je veux pouvoir <textarea asp-for="@Model.What" class="form-control" placeholder="Quoi?"></textarea>
+                    afin <textarea asp-for="@Model.Why" class="form-control" placeholder="Pourquoi?"></textarea>
+                    <hr />
+                    <a href="#" class="edit-story" data-target="#story-view-@Model.Id" data-id="@Model.Id">Modifier</a> |
+                    <a href="#" class="cancel-edit-story" data-target="#story-view-@Model.Id" data-id="@Model.Id">Annuler</a>  
+            </div>
+        </form>
+    </div>
+}
+else
+{
+    <div class="col-sm-12 col-md-4 " id="story-@Model.Id">
+        <div class="alert alert-@Model.Color adding-new-story" role="alert" id="story-content-@Model.Id">
+            <form id="story-form-@Model.Id">
+                <div id="new-story-ui">
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="Color" />
+                    <input type="hidden" asp-for="Order" />
+
+                    <strong>N° @Model.Order</strong><br />
+                    Context:<select asp-items="@Model.Contexts" asp-for="ContextId" class="form-control">
+                        <option value="">--Context--</option>
+                    </select>
+                    En tant que:<select asp-items="@Model.Actors" asp-for="ActorId" class="form-control">
+                        <option value="">--Acteur--</option>
+                    </select>
+                    , je veux pouvoir <textarea asp-for="@Model.What" class="form-control" placeholder="Quoi?"></textarea>
+                    afin <textarea asp-for="@Model.Why" class="form-control" placeholder="Pourquoi?"></textarea>
+                    <hr />
+                    <a href="#" class="add-story" data-target="#story-@Model.Id" data-id="@Model.Id">Enregistrer</a> |
+                    <a href="#" class="cancel-add-story" data-target="#story-@Model.Id">Annuler</a>
+
+                </div>
+            </form>
+        </div>
+    </div>
+}

@@ -1,0 +1,53 @@
+﻿@page
+@model UsersStories.Pages.Stories.CreateModel
+
+<h4>Story</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Story.Id" />
+            <div class="form-group">
+                <label asp-for="Story.ActorId" class="control-label"></label>
+                <select asp-for="Story.ActorId" class ="form-control" asp-items="ViewBag.ActorId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Story.What" class="control-label"></label>
+                <input asp-for="Story.What" class="form-control" />
+                <span asp-validation-for="Story.What" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Story.Why" class="control-label"></label>
+                <input asp-for="Story.Why" class="form-control" />
+                <span asp-validation-for="Story.Why" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Story.Order" class="control-label"></label>
+                <input asp-for="Story.Order" class="form-control" />
+                <span asp-validation-for="Story.Order" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Story.Validated" /> @Html.DisplayNameFor(model => model.Story.Validated)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Story.SysDate" class="control-label"></label>
+                <input asp-for="Story.SysDate" class="form-control" />
+                <span asp-validation-for="Story.SysDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
