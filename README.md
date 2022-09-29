@@ -1,4 +1,6 @@
-# A user story is a simple description of a user’s expressed need or expectation and is used in the area of software development and new product design to determine the features to be developed.
+# Users stories
+
+A user story is a simple description of a user’s expressed need or expectation and is used in the area of software development and new product design to determine the features to be developed.
 
 Principles
 A user story is a simple phrase in everyday language to define with sufficient precision the content of a feature to be developed. It generally contains three descriptive elements of the functionality, in the form:
