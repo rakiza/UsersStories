@@ -1,0 +1,6 @@
+@model StoryItemModel
+<div class="story-btns text-right">
+    <a href="#" class="edit-mode-story" data-target="#story-view-@Model.Id" data-id="@Model.Id">edit</a> |
+    <a href="#" class="clone-story" data-id="@Model.Id">clone</a> |
+    <a href="#" class="delete-story" data-id="@Model.Id" data-target="#story-view-@Model.Id">delete</a>
+</div>
