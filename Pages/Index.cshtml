@@ -1,67 +1,71 @@
-﻿@page
+@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
 <div class="text-center mb-2">
-    <h1 class="display-4">Bienvenu</h1>
-    <p>Application DocMissions Users Stories</p><br />
-    <p>Un récit utilisateur, ou « user story » en anglais, est une description simple d’un besoin ou d’une attente exprimée par un utilisateur et utilisée dans le domaine du développement de logiciels et de la conception de nouveaux produits pour déterminer les fonctionnalités à développer.</p>
-    @*<a asp-page="/Stories/Create" class="btn btn-outline-primary">Vous êtes prêts, Créer un récit</a>*@
-    <a asp-page="/Stories/Index" class="btn btn-outline-dark">Afficher les récits</a>
+    <h1 class="display-4">Welcome</h1>
+    <p>Application ArcelorMittal DataStore Project Users Stories</p><br />
+    <p>A user story is a simple description of a user’s expressed need or expectation and is used in the area of software development and new product design to determine the features to be developed.</p>
+    
+    <a asp-page="/Stories/Index" class="btn btn-outline-dark">View Stories</a>
 </div>
 <div class="row">
     <div class="col-sm-12 col-md-6">
-        <h2>Principes</h2>
+        <h2>Principles</h2>
         <p>
-            Un récit utilisateur est une phrase simple dans le langage de tous les jours permettant de définir avec suffisamment de précision le contenu d'une fonctionnalité à développer. Elle contient généralement trois éléments descriptifs de la fonctionnalité, sous la forme :
+            A user story is a simple phrase in everyday language to define with sufficient precision the content of a feature to be developed. It generally contains three descriptive elements of the functionality, in the form:
         </p>
         <div class="alert alert-secondary" role="alert">
-            En tant que <strong>qui</strong>, je veux <strong>quoi</strong> afin de <strong>pourquoi</strong>
+            as a <strong>who</strong>, I want to <strong>what</strong> in order to <strong>why</strong>
         </div>
         <ul>
             <li>
-                Le qui indique l'utilisateur du point de vue duquel on se place.
-                Il s'agit souvent d'un rôle dans l'usage du produit (par exemple « Administrateur » ou « Praticien »). Pour mieux illustrer la diversité des besoins, on peut également utiliser le concept de persona, c'est-à-dire une personne fictive, représentative de catégories d'usagers du produit, et à laquelle on peut s'identifier pour mieux comprendre ses attentes.
-                L'identification et la description des personas se fait alors avant de commencer l'écriture des récits utilisateurs.
+                The <strong>"as a"</strong> indicates the user from whose point of view we stand.
+                This is often a role in the use of the product (for example “administrator”, “scientist” or “automaton technician”). To better illustrate the diversity of needs, we can also use the concept of persona, that is, a fictional person, representative of categories of users of the product, and to whom we can identify to better understand his expectations.
+                The identification and description of the personas is then done before the writing of the user stories.
             </li>
             <li>
-                Le quoi décrit succinctement la fonctionnalité ou le comportement attendu. Le but du récit n'est pas d'en fournir une explication exhaustive. Cette dernière est obtenue de façon interactive au cours d'une conversation avec les utilisateurs concernés ou leurs représentants.
+                The <strong>"whats"</strong> briefly describes the expected functionality or behaviour. The purpose of the narrative is not to provide a comprehensive explanation. It is obtained interactively during a conversation with the users concerned or their representatives.
             </li>
             <li>
-                Le pourquoi permet d'identifier l'intérêt de la fonctionnalité et d'en justifier le développement. Il permet également de mieux évaluer la priorité du récit.
+                The <strong>"why"</strong> allows to identify the interest of the functionality and to justify its development. It also allows us to better assess the story’s priority.
             </li>
         </ul>
     </div>
     <div class="col-sm-12 col-md-6">
-        <h2>Exemples</h2>
+        <h2>Examples</h2>
         <div class="alert alert-primary" role="alert">
             <p>
-                En tant que <strong><i>Administrateur</i></strong>,
+                As an <strong><i>administrator</i></strong>,
                 <br />
-                je veux pouvoir <i>rechercher mes praticiens par leur prénom et leur nom de famille et leur spécialité</i> afin <i>de les retrouver rapidement lorsque je reçois une demande de permutation.</i>
+                I want to be able <i>search my users by first and last name and specialty</i> in order <i> to find them quickly when I receive a new request from a user .</i>
             </p>
         </div>
         <div class="alert alert-info" role="alert">
             <p>
-                En tant que <strong><i>Praticien</i></strong>,
+                As an <strong><i>automaton technician</i></strong>,
                 <br />
-                je veux pouvoir <i>renseigner nom nom de famille, mon prénom, nom adresse de messagerie et un mot de passe </i> afin <i> de m'inscrire et créer mon compte sur l'application DocMisssions</i>
+                I want to be able <i>to declare a new .dat file. </i> in order <i> to save the metadata in the database</i>
             </p>
         </div>
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-info" role="alert">
             <p>
-                En tant que <strong><i>Chef de service dans un hôpital</i></strong>,
+                As an <strong><i>automaton technician</i></strong>,
                 <br />
-                je veux pouvoir <i>recevoir une liste des noms des praticiens avec leurs dossiers de candidatures </i> afin <i> de choisir un ou plusieurs remplacements</i>
+                I want to be able <i>to find a signal </i> in order <i>
+                    to provide to users information on
+                    the signals (twin signals, name, ...)
+                </i>
             </p>
         </div>
         <div class="alert alert-danger" role="alert">
             <p>
-                En tant que <strong><i>Système</i></strong>,
+                As an <strong><i>scientist</i></strong>,
                 <br />
-                je veux pouvoir <i>connaitre la liste des noms des praticiens choisi par un hôpitale suite à une demande de remplacement </i> afin <i> de générer les ordres de missions, les notifications et les envoyer.</i>
+                I want to be able <i>to find a specific
+                signal </i> in order <i> analyze it.</i>
             </p>
         </div>        
     </div>
