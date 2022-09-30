@@ -1,4 +1,4 @@
-﻿@model StoryItemModel
+@model StoryItemModel
 @{
     if (Model.ActorColor == null)
     {
@@ -8,25 +8,22 @@
 }
 @if (Model.AfterEditing)
 {
-<div class="alert alert-@Model.ActorColor story-view" role="alert">
-    <div class="context text-right">
-        <div class="story-number">
-            <strong>N° @Model.Order:</strong>
+    <div class="alert alert-@Model.ActorColor story-view" role="alert">
+        <div class="context text-right">
+            <div class="story-number">
+                <strong>N° @Model.Order:</strong>
+            </div>
+            <div>
+                <i>@Model.Context</i>
+            </div>
         </div>
-        <div>
-            <i>@Model.Context</i>
-        </div>
-    </div>
-    En tant que <strong><i>@Model.Actor</i></strong>,
-    <br />
-    je veux pouvoir <i>@Model.What</i> afin <i>@Model.Why</i>
+        as an <strong><i>@Model.Actor</i></strong>,
+        <br />
+        I want to be able to <i>@Model.What</i> in order to <i>@Model.Why</i>
 
-    <div class="story-btns text-right">
-        <a href="#" class="edit-mode-story" data-target="#story-view-@Model.Id" data-id="@Model.Id">Modifier</a> |
-        <a href="#" class="clone-story" data-id="@Model.Id">Cloner</a> |
-        <a href="#" class="delete-story" data-id="@Model.Id" data-target="#story-view-@Model.Id">Supprimer</a>
+        <partial name="_Commands" for="@Model">
+
     </div>
-</div>
 }
 else
 {
@@ -39,16 +36,12 @@ else
                 <div class="text-right">
                     <i>@Model.Context</i>
                 </div>
-            </div> 
-            En tant que <strong><i>@Model.Actor</i></strong>,
-            <br />
-            je veux pouvoir <i>@Model.What</i> afin <i>@Model.Why</i>
-
-            <div class="story-btns text-right">
-                <a href="#" class="edit-mode-story" data-target="#story-view-@Model.Id" data-id="@Model.Id">Modifier</a> |
-                <a href="#" class="clone-story" data-id="@Model.Id">Cloner</a> |
-                <a href="#" class="delete-story" data-id="@Model.Id" data-target="#story-view-@Model.Id">Supprimer</a>
             </div>
+            as an <strong><i>@Model.Actor</i></strong>,
+            <br />
+            I want to be able to <i>@Model.What</i> in order to <i>@Model.Why</i>
+            <partial name="_Commands" for="@Model">
+
         </div>
     </div>
 }
