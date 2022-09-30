@@ -1,7 +1,7 @@
-﻿@page
+@page
 @model UsersStories.Pages.Actors.CreateModel
 
-<h4>Nouvel acteur</h4>
+<h4>new actor</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -16,19 +16,19 @@
             <div class="form-group">
                 <label asp-for="Actor.Color" class="control-label"></label>
                 <select asp-items="@Model.Actor.Colors" asp-for="Actor.Color" class="form-control" >
-                    <option value="">--Couleur--</option>
+                    <option value="">--background color--</option>
                 </select>
                 <span asp-validation-for="Actor.Color" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Enregistrer" class="btn btn-primary" />
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Page précédente</a>
+    <a asp-page="Index">Go Back</a>
 </div>
 
 @section Scripts {
