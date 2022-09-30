@@ -1,8 +1,8 @@
-﻿@page
+@page
 @model UsersStories.Pages.Actors.IndexModel
 
 <p>
-    <a asp-page="Create">Nouvel acteur</a>
+    <a asp-page="Create">add new </a>
 </p>
 <table class="table">
     <thead>
@@ -20,9 +20,9 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td class="text-right">
-                <a asp-page="./Edit" asp-route-id="@item.Id">Modifier</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Détails</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Supprimer</a>
+                <a asp-page="./Edit" asp-route-id="@item.Id">edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">delete</a>
             </td>
         </tr>
 }
