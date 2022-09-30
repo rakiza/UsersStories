@@ -1,8 +1,8 @@
-﻿@page
+@page
 @model UsersStories.Pages.Contexts.IndexModel
 
 <p>
-    <a asp-page="Create">Ajouter un context</a>
+    <a asp-page="Create">add new context</a>
 </p>
 <table class="table">
     <thead>
@@ -26,8 +26,8 @@
                 @Html.DisplayFor(modelItem => item.Order)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Modifier</a> |                
-                <a asp-page="./Delete" asp-route-id="@item.Id">Supprimer</a>
+                <a asp-page="./Edit" asp-route-id="@item.Id">edit</a> |                
+                <a asp-page="./Delete" asp-route-id="@item.Id">delete</a>
             </td>
         </tr>
 }
